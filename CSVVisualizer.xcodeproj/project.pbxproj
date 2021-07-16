@@ -1,0 +1,704 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD21E94726A1DC8F00F2E175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21E94626A1DC8F00F2E175 /* AppDelegate.swift */; };
+		CD21E95026A1DC9000F2E175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD21E94F26A1DC9000F2E175 /* Assets.xcassets */; };
+		CD21E95326A1DC9000F2E175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD21E95126A1DC9000F2E175 /* LaunchScreen.storyboard */; };
+		CD21E95E26A1DC9000F2E175 /* CSVVisualizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21E95D26A1DC9000F2E175 /* CSVVisualizerTests.swift */; };
+		CD21E96926A1DC9000F2E175 /* CSVVisualizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21E96826A1DC9000F2E175 /* CSVVisualizerUITests.swift */; };
+		CDCD77F326A1DE0B00F7F106 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD77ED26A1DE0B00F7F106 /* AppCoordinator.swift */; };
+		CDCD77F826A1DE0B00F7F106 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD77F226A1DE0B00F7F106 /* AppDependencies.swift */; };
+		CDF2284726A1E45B00EBE5BA /* CSVReaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF2284626A1E45B00EBE5BA /* CSVReaderService.swift */; };
+		CDF2285126A1E46800EBE5BA /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF2284B26A1E46800EBE5BA /* RootCoordinator.swift */; };
+		CDF2285226A1E46800EBE5BA /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF2284C26A1E46800EBE5BA /* NavigationCoordinator.swift */; };
+		CDF2285326A1E46800EBE5BA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF2284D26A1E46800EBE5BA /* Coordinator.swift */; };
+		CDF2285426A1E46800EBE5BA /* Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF2284E26A1E46800EBE5BA /* Reactor.swift */; };
+		CDF2285526A1E46800EBE5BA /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF2285026A1E46800EBE5BA /* Array.swift */; };
+		D7D458660177625EE619B766 /* libPods-CSVVisualizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF5E62A5BA9D3EA9450FD9 /* libPods-CSVVisualizer.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD21E95A26A1DC9000F2E175 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD21E93B26A1DC8F00F2E175 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD21E94226A1DC8F00F2E175;
+			remoteInfo = CSVVisualizer;
+		};
+		CD21E96526A1DC9000F2E175 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD21E93B26A1DC8F00F2E175 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD21E94226A1DC8F00F2E175;
+			remoteInfo = CSVVisualizer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		80CF5E62A5BA9D3EA9450FD9 /* libPods-CSVVisualizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CSVVisualizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A09EE9B38F457A847D554C9F /* Pods-CSVVisualizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVVisualizer.release.xcconfig"; path = "Target Support Files/Pods-CSVVisualizer/Pods-CSVVisualizer.release.xcconfig"; sourceTree = "<group>"; };
+		CD21E94326A1DC8F00F2E175 /* CSVVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSVVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD21E94626A1DC8F00F2E175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD21E94F26A1DC9000F2E175 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD21E95226A1DC9000F2E175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD21E95426A1DC9000F2E175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD21E95926A1DC9000F2E175 /* CSVVisualizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVVisualizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD21E95D26A1DC9000F2E175 /* CSVVisualizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVVisualizerTests.swift; sourceTree = "<group>"; };
+		CD21E95F26A1DC9000F2E175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD21E96426A1DC9000F2E175 /* CSVVisualizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVVisualizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD21E96826A1DC9000F2E175 /* CSVVisualizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVVisualizerUITests.swift; sourceTree = "<group>"; };
+		CD21E96A26A1DC9000F2E175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDCD77ED26A1DE0B00F7F106 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		CDCD77F226A1DE0B00F7F106 /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		CDF2284626A1E45B00EBE5BA /* CSVReaderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVReaderService.swift; sourceTree = "<group>"; };
+		CDF2284B26A1E46800EBE5BA /* RootCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		CDF2284C26A1E46800EBE5BA /* NavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		CDF2284D26A1E46800EBE5BA /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CDF2284E26A1E46800EBE5BA /* Reactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactor.swift; sourceTree = "<group>"; };
+		CDF2285026A1E46800EBE5BA /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		F25E9AA036C63DD511988D61 /* Pods-CSVVisualizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVVisualizer.debug.xcconfig"; path = "Target Support Files/Pods-CSVVisualizer/Pods-CSVVisualizer.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD21E94026A1DC8F00F2E175 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7D458660177625EE619B766 /* libPods-CSVVisualizer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD21E95626A1DC9000F2E175 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD21E96126A1DC9000F2E175 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B3B98DA41275A61CAFBF2A11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80CF5E62A5BA9D3EA9450FD9 /* libPods-CSVVisualizer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD21E93A26A1DC8F00F2E175 = {
+			isa = PBXGroup;
+			children = (
+				CD21E94526A1DC8F00F2E175 /* CSVVisualizer */,
+				CD21E95C26A1DC9000F2E175 /* CSVVisualizerTests */,
+				CD21E96726A1DC9000F2E175 /* CSVVisualizerUITests */,
+				CD21E94426A1DC8F00F2E175 /* Products */,
+				EFD37D5A4E22C524218476F5 /* Pods */,
+				B3B98DA41275A61CAFBF2A11 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CD21E94426A1DC8F00F2E175 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD21E94326A1DC8F00F2E175 /* CSVVisualizer.app */,
+				CD21E95926A1DC9000F2E175 /* CSVVisualizerTests.xctest */,
+				CD21E96426A1DC9000F2E175 /* CSVVisualizerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD21E94526A1DC8F00F2E175 /* CSVVisualizer */ = {
+			isa = PBXGroup;
+			children = (
+				CDF2284826A1E46800EBE5BA /* Utilities */,
+				CDF2284526A1E45B00EBE5BA /* Services */,
+				CDCD77EC26A1DDCA00F7F106 /* Resources */,
+				CDCD77ED26A1DE0B00F7F106 /* AppCoordinator.swift */,
+				CDCD77F226A1DE0B00F7F106 /* AppDependencies.swift */,
+				CD21E94626A1DC8F00F2E175 /* AppDelegate.swift */,
+				CD21E95426A1DC9000F2E175 /* Info.plist */,
+			);
+			path = CSVVisualizer;
+			sourceTree = "<group>";
+		};
+		CD21E95C26A1DC9000F2E175 /* CSVVisualizerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD21E95D26A1DC9000F2E175 /* CSVVisualizerTests.swift */,
+				CD21E95F26A1DC9000F2E175 /* Info.plist */,
+			);
+			path = CSVVisualizerTests;
+			sourceTree = "<group>";
+		};
+		CD21E96726A1DC9000F2E175 /* CSVVisualizerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD21E96826A1DC9000F2E175 /* CSVVisualizerUITests.swift */,
+				CD21E96A26A1DC9000F2E175 /* Info.plist */,
+			);
+			path = CSVVisualizerUITests;
+			sourceTree = "<group>";
+		};
+		CDCD77EC26A1DDCA00F7F106 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD21E94F26A1DC9000F2E175 /* Assets.xcassets */,
+				CD21E95126A1DC9000F2E175 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CDF2284526A1E45B00EBE5BA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CDF2284626A1E45B00EBE5BA /* CSVReaderService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CDF2284826A1E46800EBE5BA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CDF2284926A1E46800EBE5BA /* Libraries */,
+				CDF2284F26A1E46800EBE5BA /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CDF2284926A1E46800EBE5BA /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				CDF2284A26A1E46800EBE5BA /* Coordinator */,
+				CDF2284E26A1E46800EBE5BA /* Reactor.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		CDF2284A26A1E46800EBE5BA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CDF2284B26A1E46800EBE5BA /* RootCoordinator.swift */,
+				CDF2284C26A1E46800EBE5BA /* NavigationCoordinator.swift */,
+				CDF2284D26A1E46800EBE5BA /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CDF2284F26A1E46800EBE5BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CDF2285026A1E46800EBE5BA /* Array.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EFD37D5A4E22C524218476F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F25E9AA036C63DD511988D61 /* Pods-CSVVisualizer.debug.xcconfig */,
+				A09EE9B38F457A847D554C9F /* Pods-CSVVisualizer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD21E94226A1DC8F00F2E175 /* CSVVisualizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD21E96D26A1DC9000F2E175 /* Build configuration list for PBXNativeTarget "CSVVisualizer" */;
+			buildPhases = (
+				E3A99445A80E4CBC9A405C6E /* [CP] Check Pods Manifest.lock */,
+				CD21E93F26A1DC8F00F2E175 /* Sources */,
+				CD21E94026A1DC8F00F2E175 /* Frameworks */,
+				CD21E94126A1DC8F00F2E175 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CSVVisualizer;
+			productName = CSVVisualizer;
+			productReference = CD21E94326A1DC8F00F2E175 /* CSVVisualizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD21E95826A1DC9000F2E175 /* CSVVisualizerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD21E97026A1DC9000F2E175 /* Build configuration list for PBXNativeTarget "CSVVisualizerTests" */;
+			buildPhases = (
+				CD21E95526A1DC9000F2E175 /* Sources */,
+				CD21E95626A1DC9000F2E175 /* Frameworks */,
+				CD21E95726A1DC9000F2E175 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD21E95B26A1DC9000F2E175 /* PBXTargetDependency */,
+			);
+			name = CSVVisualizerTests;
+			productName = CSVVisualizerTests;
+			productReference = CD21E95926A1DC9000F2E175 /* CSVVisualizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD21E96326A1DC9000F2E175 /* CSVVisualizerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD21E97326A1DC9000F2E175 /* Build configuration list for PBXNativeTarget "CSVVisualizerUITests" */;
+			buildPhases = (
+				CD21E96026A1DC9000F2E175 /* Sources */,
+				CD21E96126A1DC9000F2E175 /* Frameworks */,
+				CD21E96226A1DC9000F2E175 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD21E96626A1DC9000F2E175 /* PBXTargetDependency */,
+			);
+			name = CSVVisualizerUITests;
+			productName = CSVVisualizerUITests;
+			productReference = CD21E96426A1DC9000F2E175 /* CSVVisualizerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD21E93B26A1DC8F00F2E175 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					CD21E94226A1DC8F00F2E175 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					CD21E95826A1DC9000F2E175 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = CD21E94226A1DC8F00F2E175;
+					};
+					CD21E96326A1DC9000F2E175 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = CD21E94226A1DC8F00F2E175;
+					};
+				};
+			};
+			buildConfigurationList = CD21E93E26A1DC8F00F2E175 /* Build configuration list for PBXProject "CSVVisualizer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD21E93A26A1DC8F00F2E175;
+			productRefGroup = CD21E94426A1DC8F00F2E175 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD21E94226A1DC8F00F2E175 /* CSVVisualizer */,
+				CD21E95826A1DC9000F2E175 /* CSVVisualizerTests */,
+				CD21E96326A1DC9000F2E175 /* CSVVisualizerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD21E94126A1DC8F00F2E175 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD21E95326A1DC9000F2E175 /* LaunchScreen.storyboard in Resources */,
+				CD21E95026A1DC9000F2E175 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD21E95726A1DC9000F2E175 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD21E96226A1DC9000F2E175 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E3A99445A80E4CBC9A405C6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CSVVisualizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD21E93F26A1DC8F00F2E175 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF2285526A1E46800EBE5BA /* Array.swift in Sources */,
+				CDF2285426A1E46800EBE5BA /* Reactor.swift in Sources */,
+				CDCD77F826A1DE0B00F7F106 /* AppDependencies.swift in Sources */,
+				CDF2284726A1E45B00EBE5BA /* CSVReaderService.swift in Sources */,
+				CDF2285126A1E46800EBE5BA /* RootCoordinator.swift in Sources */,
+				CDCD77F326A1DE0B00F7F106 /* AppCoordinator.swift in Sources */,
+				CDF2285226A1E46800EBE5BA /* NavigationCoordinator.swift in Sources */,
+				CD21E94726A1DC8F00F2E175 /* AppDelegate.swift in Sources */,
+				CDF2285326A1E46800EBE5BA /* Coordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD21E95526A1DC9000F2E175 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD21E95E26A1DC9000F2E175 /* CSVVisualizerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD21E96026A1DC9000F2E175 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD21E96926A1DC9000F2E175 /* CSVVisualizerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD21E95B26A1DC9000F2E175 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD21E94226A1DC8F00F2E175 /* CSVVisualizer */;
+			targetProxy = CD21E95A26A1DC9000F2E175 /* PBXContainerItemProxy */;
+		};
+		CD21E96626A1DC9000F2E175 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD21E94226A1DC8F00F2E175 /* CSVVisualizer */;
+			targetProxy = CD21E96526A1DC9000F2E175 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD21E95126A1DC9000F2E175 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD21E95226A1DC9000F2E175 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD21E96B26A1DC9000F2E175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD21E96C26A1DC9000F2E175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD21E96E26A1DC9000F2E175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F25E9AA036C63DD511988D61 /* Pods-CSVVisualizer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CSVVisualizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cipriancojan.CSVVisualizer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD21E96F26A1DC9000F2E175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A09EE9B38F457A847D554C9F /* Pods-CSVVisualizer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CSVVisualizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cipriancojan.CSVVisualizer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD21E97126A1DC9000F2E175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CSVVisualizerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cipriancojan.CSVVisualizerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSVVisualizer.app/CSVVisualizer";
+			};
+			name = Debug;
+		};
+		CD21E97226A1DC9000F2E175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CSVVisualizerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cipriancojan.CSVVisualizerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSVVisualizer.app/CSVVisualizer";
+			};
+			name = Release;
+		};
+		CD21E97426A1DC9000F2E175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CSVVisualizerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cipriancojan.CSVVisualizerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CSVVisualizer;
+			};
+			name = Debug;
+		};
+		CD21E97526A1DC9000F2E175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CSVVisualizerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cipriancojan.CSVVisualizerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CSVVisualizer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD21E93E26A1DC8F00F2E175 /* Build configuration list for PBXProject "CSVVisualizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD21E96B26A1DC9000F2E175 /* Debug */,
+				CD21E96C26A1DC9000F2E175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD21E96D26A1DC9000F2E175 /* Build configuration list for PBXNativeTarget "CSVVisualizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD21E96E26A1DC9000F2E175 /* Debug */,
+				CD21E96F26A1DC9000F2E175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD21E97026A1DC9000F2E175 /* Build configuration list for PBXNativeTarget "CSVVisualizerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD21E97126A1DC9000F2E175 /* Debug */,
+				CD21E97226A1DC9000F2E175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD21E97326A1DC9000F2E175 /* Build configuration list for PBXNativeTarget "CSVVisualizerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD21E97426A1DC9000F2E175 /* Debug */,
+				CD21E97526A1DC9000F2E175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD21E93B26A1DC8F00F2E175 /* Project object */;
+}
