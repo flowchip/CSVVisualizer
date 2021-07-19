@@ -33,7 +33,7 @@ class AppCoordinator: RootCoordinator {
     }
     
     func showHomeScene() {
-//        let coordinator = HomeCoordinator(dependencies: dependencies, navigationController: navigationController)
-//        switchTo(coordinator: coordinator)
+        let coordinator = HomeCoordinator(dependencies: dependencies, navigationController: navigationController)
+        switchTo(coordinator: coordinator)
     }
 }
