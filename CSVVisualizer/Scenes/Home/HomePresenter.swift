@@ -31,12 +31,15 @@ final class HomePresenter: HomeViewControllerInput {
                     birth: issues.headers[safe: 3],
                     style: .header)
                 
-                let items = issues.items.dropFirst().map {
-                    IssueViewModel(
-                        name: $0.name,
-                        surname: $0.surname,
-                        issuesCount: $0.issuesCount,
-                        birth: $0.dateOfBirth)
+                let items = issues.items.dropFirst().map { item -> IssueViewModel in
+                    let birthDate = item.dateOfBirth?.getDate()
+                    let birth = birthDate?.prettyDateTime()
+                    
+                    return IssueViewModel(
+                        name: item.name,
+                        surname: item.surname,
+                        issuesCount: item.issuesCount,
+                        birth: birth)
                 }
                 
                 return IssuesSection(header: header, items: items)
@@ -55,16 +58,4 @@ struct IssuesSection {
     let items: [IssueViewModel]
 }
 
-extension Optional where Wrapped == String {
-    func withoutQuotes() -> String? {
-        let unwrapped = self ?? ""
-        return String(unwrapped.dropFirst().dropLast())
-    }
-}
 
-extension String {
-    func withoutQuotes() -> String {
-        guard count >= 3 else { return self }
-        return String(dropFirst().dropLast())
-    }
-}

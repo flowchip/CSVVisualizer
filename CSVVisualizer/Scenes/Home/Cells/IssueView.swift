@@ -29,11 +29,14 @@ struct IssueViewModel {
 }
 
 final class IssueView: UIView {
+    
+    // MARK:- Views
     let nameLabel = Label()
     let surnameLabel = Label()
     let countLabel = Label()
     let birthLabel = Label()
     
+    // MARK:- Lifecycle
     init() {
         super.init(frame: .zero)
         addSubviews()
@@ -44,14 +47,15 @@ final class IssueView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addSubviews() {
+    // MARK:- Private functions
+    private func addSubviews() {
         addSubview(nameLabel)
         addSubview(surnameLabel)
         addSubview(countLabel)
         addSubview(birthLabel)
     }
     
-    func setupConstraints() {
+    private func setupConstraints() {
         nameLabel.snp.makeConstraints {
             $0.left.equalToSuperview().offset(8)
             $0.top.bottom.equalToSuperview()
@@ -65,7 +69,7 @@ final class IssueView: UIView {
         countLabel.snp.makeConstraints {
             $0.left.equalTo(surnameLabel.snp.right)
             $0.top.bottom.equalToSuperview()
-            $0.width.equalToSuperview().multipliedBy(0.2)
+            $0.width.equalToSuperview().multipliedBy(0.22)
         }
         birthLabel.snp.makeConstraints {
             $0.left.equalTo(countLabel.snp.right)
@@ -73,6 +77,7 @@ final class IssueView: UIView {
         }
     }
     
+    // MARK:- Functions
     func config(with viewModel: IssueViewModel) {
         nameLabel.text = viewModel.name
         surnameLabel.text = viewModel.surname
@@ -81,8 +86,7 @@ final class IssueView: UIView {
         
         let style = viewModel.style
         
-        backgroundColor = style == .header ? .systemBlue : .white
-        
+        backgroundColor = style == .header ? .systemBlue.withAlphaComponent(0.8) : .white
         layer.borderWidth = style == .header ? 0 : 0.5
         layer.borderColor = UIColor.gray.withAlphaComponent(0.2).cgColor
         

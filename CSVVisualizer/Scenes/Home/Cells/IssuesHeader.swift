@@ -8,11 +8,16 @@
 import UIKit
 import SnapKit
 
-class IssuesHeader: UICollectionReusableView, ReusableView {
+final class IssuesHeader: UICollectionReusableView, ReusableView {
+    
+    // MARK: - Views
     let issueView = IssueView()
 
+    // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        backgroundColor = .white
         
         addSubview(issueView)
         issueView.snp.makeConstraints {
@@ -24,6 +29,7 @@ class IssuesHeader: UICollectionReusableView, ReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Functions
     func config(with viewModel: IssueViewModel) {
         issueView.config(with: viewModel)
     }

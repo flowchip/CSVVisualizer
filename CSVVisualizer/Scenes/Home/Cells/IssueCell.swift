@@ -7,7 +7,7 @@
 
 import UIKit
 
-class IssueCell: UICollectionViewCell, ReusableView {
+final class IssueCell: UICollectionViewCell, ReusableView {
     
     enum Constants {
         static let spacing: CGFloat = 16
@@ -33,7 +33,7 @@ class IssueCell: UICollectionViewCell, ReusableView {
     }
     
     // MARK:- Private functions
-    func setupAppearance() {
+    private func setupAppearance() {
         contentView.backgroundColor = .white
     }
     

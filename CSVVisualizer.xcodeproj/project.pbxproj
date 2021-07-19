@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0DDF3526A5EEED00EB1F9C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0DDF3426A5EEED00EB1F9C /* String.swift */; };
+		CD0DDF3926A5EF5400EB1F9C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0DDF3826A5EF5400EB1F9C /* Date.swift */; };
 		CD21E94726A1DC8F00F2E175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21E94626A1DC8F00F2E175 /* AppDelegate.swift */; };
 		CD21E95026A1DC9000F2E175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD21E94F26A1DC9000F2E175 /* Assets.xcassets */; };
 		CD21E95326A1DC9000F2E175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD21E95126A1DC9000F2E175 /* LaunchScreen.storyboard */; };
@@ -54,6 +56,8 @@
 /* Begin PBXFileReference section */
 		80CF5E62A5BA9D3EA9450FD9 /* libPods-CSVVisualizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CSVVisualizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09EE9B38F457A847D554C9F /* Pods-CSVVisualizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVVisualizer.release.xcconfig"; path = "Target Support Files/Pods-CSVVisualizer/Pods-CSVVisualizer.release.xcconfig"; sourceTree = "<group>"; };
+		CD0DDF3426A5EEED00EB1F9C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CD0DDF3826A5EF5400EB1F9C /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		CD21E94326A1DC8F00F2E175 /* CSVVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSVVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD21E94626A1DC8F00F2E175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD21E94F26A1DC9000F2E175 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -267,6 +271,8 @@
 			children = (
 				CD56962726A5B35700B8DF67 /* UICollectionView.swift */,
 				CDF2285026A1E46800EBE5BA /* Array.swift */,
+				CD0DDF3426A5EEED00EB1F9C /* String.swift */,
+				CD0DDF3826A5EF5400EB1F9C /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 			files = (
 				CD56962F26A5D88500B8DF67 /* IssuesHeader.swift in Sources */,
 				CDF2285526A1E46800EBE5BA /* Array.swift in Sources */,
+				CD0DDF3526A5EEED00EB1F9C /* String.swift in Sources */,
 				CDF2285426A1E46800EBE5BA /* Reactor.swift in Sources */,
 				CD56962426A5AE8400B8DF67 /* HomePresenter.swift in Sources */,
 				CD56962126A5AE8400B8DF67 /* HomeInteractor.swift in Sources */,
@@ -451,6 +458,7 @@
 				CDF2285226A1E46800EBE5BA /* NavigationCoordinator.swift in Sources */,
 				CD56962626A5B26100B8DF67 /* Reusable.swift in Sources */,
 				CD21E94726A1DC8F00F2E175 /* AppDelegate.swift in Sources */,
+				CD0DDF3926A5EF5400EB1F9C /* Date.swift in Sources */,
 				CD56962D26A5C8E800B8DF67 /* Label.swift in Sources */,
 				CD56963126A5D8B000B8DF67 /* IssueView.swift in Sources */,
 				CD56962226A5AE8400B8DF67 /* HomeViewController.swift in Sources */,
