@@ -11,7 +11,7 @@ import UIKit
 import SnapKit
 
 protocol HomeViewControllerInput {
-    var items: Driver<[IssueCellViewModel]> { get }
+    var section: Driver<IssuesSection> { get }
     var error: Driver<String> { get }
 }
 
@@ -21,7 +21,6 @@ protocol HomeViewControllerOutput {
 
 enum HomeAction {
     case viewLoaded
-    case selectedIndexPath(IndexPath)
 }
 
 final class HomeViewController: UIViewController {
@@ -43,7 +42,7 @@ final class HomeViewController: UIViewController {
     let input: HomeViewControllerInput
     let output: HomeViewControllerOutput
     private let disposeBag = DisposeBag()
-    private var items = [IssueCellViewModel]()
+    private var section: IssuesSection?
     
     // Infinyte scroll
     private var showMore: Bool = false
@@ -72,8 +71,7 @@ final class HomeViewController: UIViewController {
 
     // MARK: - Private functions
     private func setupAppearance() {
-//        navigationBar.setTitle("Front Page")
-        view.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1)
+        title = "Issues"
     }
 
     private func addSubviews() {
@@ -88,16 +86,15 @@ final class HomeViewController: UIViewController {
         collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
         collectionView.contentInsetAdjustmentBehavior = .never
     }
 
     private func setupBindings() {
-        input.items
-            .drive(onNext: { [weak self] items in
+        input.section
+            .drive(onNext: { [weak self] section in
                 guard let self = self else { return }
 
-                self.items = items
+                self.section = section
                 self.collectionView.reloadData()
                 self.canLoadMore = true
             })
@@ -124,11 +121,11 @@ final class HomeViewController: UIViewController {
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return self.section?.items.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let viewModel = items[safe: indexPath.item]
+        let viewModel = section?.items[safe: indexPath.item]
     
         let cell: IssueCell = {
             return collectionView.dequeueReusableCell(for: indexPath) as IssueCell
@@ -138,8 +135,14 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        output.action.onNext(.selectedIndexPath(indexPath))
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionHeader, let viewModel = section?.header {
+            let sectionHeader = collectionView.dequeueSupplementaryView(ofKind: kind, for: indexPath) as IssuesHeader
+            sectionHeader.config(with: viewModel)
+            return sectionHeader
+        } else { //No footer in this case but can add option for that
+            return UICollectionReusableView()
+        }
     }
 }
 
@@ -150,7 +153,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width / 4, height: 50)
+        guard self.section?.header != nil else { return .zero }
+        return CGSize(width: view.frame.width , height: 40)
     }
 }
 

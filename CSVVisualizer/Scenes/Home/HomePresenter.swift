@@ -15,30 +15,31 @@ protocol HomePresenterInput {
 }
 
 final class HomePresenter: HomeViewControllerInput {
-    var items: Driver<[IssueCellViewModel]>
+    var section: Driver<IssuesSection>
     let error: Driver<String>
     
     init(input: HomePresenterInput) {
-        items = input.state
+        section = input.state
             .map { $0.issues }
             .filterNil()
             .take(1)
             .map { issues in
-                var items = [IssueCellViewModel(
-                                name: issues.headers[safe: 0],
-                                    surname: issues.headers[safe: 1],
-                                    issuesCount: issues.headers[safe: 2],
-                                    birth: issues.headers[safe: 3])]
+                let header = IssueViewModel(
+                    name: issues.headers[safe: 0],
+                    surname: issues.headers[safe: 1],
+                    issuesCount: issues.headers[safe: 2],
+                    birth: issues.headers[safe: 3],
+                    style: .header)
                 
-                for item in issues.items {
-                    items.append(IssueCellViewModel(
-                                        name: item.name,
-                                        surname: item.surname,
-                                        issuesCount: item.issuesCount,
-                                        birth: item.dateOfBirth))
+                let items = issues.items.dropFirst().map {
+                    IssueViewModel(
+                        name: $0.name,
+                        surname: $0.surname,
+                        issuesCount: $0.issuesCount,
+                        birth: $0.dateOfBirth)
                 }
                 
-                return items
+                return IssuesSection(header: header, items: items)
             }
             .asDriver(onErrorDriveWith: .never())
         
@@ -47,6 +48,11 @@ final class HomePresenter: HomeViewControllerInput {
             .filterNil()
             .asDriver(onErrorDriveWith: .never())
     }
+}
+
+struct IssuesSection {
+    let header: IssueViewModel
+    let items: [IssueViewModel]
 }
 
 extension Optional where Wrapped == String {
