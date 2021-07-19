@@ -12,6 +12,15 @@
 		CD21E95326A1DC9000F2E175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD21E95126A1DC9000F2E175 /* LaunchScreen.storyboard */; };
 		CD21E95E26A1DC9000F2E175 /* CSVVisualizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21E95D26A1DC9000F2E175 /* CSVVisualizerTests.swift */; };
 		CD21E96926A1DC9000F2E175 /* CSVVisualizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21E96826A1DC9000F2E175 /* CSVVisualizerUITests.swift */; };
+		CD56961F26A5AE8400B8DF67 /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56961926A5AE8400B8DF67 /* IssueCell.swift */; };
+		CD56962126A5AE8400B8DF67 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56961B26A5AE8400B8DF67 /* HomeInteractor.swift */; };
+		CD56962226A5AE8400B8DF67 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56961C26A5AE8400B8DF67 /* HomeViewController.swift */; };
+		CD56962326A5AE8400B8DF67 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56961D26A5AE8400B8DF67 /* HomeCoordinator.swift */; };
+		CD56962426A5AE8400B8DF67 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56961E26A5AE8400B8DF67 /* HomePresenter.swift */; };
+		CD56962626A5B26100B8DF67 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56962526A5B26100B8DF67 /* Reusable.swift */; };
+		CD56962826A5B35700B8DF67 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56962726A5B35700B8DF67 /* UICollectionView.swift */; };
+		CD56962A26A5B84900B8DF67 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = CD56962926A5B84900B8DF67 /* issues.csv */; };
+		CD56962D26A5C8E800B8DF67 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56962C26A5C8E800B8DF67 /* Label.swift */; };
 		CDCD77F326A1DE0B00F7F106 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD77ED26A1DE0B00F7F106 /* AppCoordinator.swift */; };
 		CDCD77F826A1DE0B00F7F106 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD77F226A1DE0B00F7F106 /* AppDependencies.swift */; };
 		CDF2284726A1E45B00EBE5BA /* CSVReaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF2284626A1E45B00EBE5BA /* CSVReaderService.swift */; };
@@ -54,6 +63,15 @@
 		CD21E96426A1DC9000F2E175 /* CSVVisualizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVVisualizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD21E96826A1DC9000F2E175 /* CSVVisualizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVVisualizerUITests.swift; sourceTree = "<group>"; };
 		CD21E96A26A1DC9000F2E175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD56961926A5AE8400B8DF67 /* IssueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
+		CD56961B26A5AE8400B8DF67 /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		CD56961C26A5AE8400B8DF67 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CD56961D26A5AE8400B8DF67 /* HomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		CD56961E26A5AE8400B8DF67 /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		CD56962526A5B26100B8DF67 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		CD56962726A5B35700B8DF67 /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		CD56962926A5B84900B8DF67 /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
+		CD56962C26A5C8E800B8DF67 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		CDCD77ED26A1DE0B00F7F106 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CDCD77F226A1DE0B00F7F106 /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		CDF2284626A1E45B00EBE5BA /* CSVReaderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVReaderService.swift; sourceTree = "<group>"; };
@@ -124,6 +142,8 @@
 		CD21E94526A1DC8F00F2E175 /* CSVVisualizer */ = {
 			isa = PBXGroup;
 			children = (
+				CD56962B26A5C8E800B8DF67 /* Views */,
+				CD56961626A5AE8400B8DF67 /* Scenes */,
 				CDF2284826A1E46800EBE5BA /* Utilities */,
 				CDF2284526A1E45B00EBE5BA /* Services */,
 				CDCD77EC26A1DDCA00F7F106 /* Resources */,
@@ -153,9 +173,46 @@
 			path = CSVVisualizerUITests;
 			sourceTree = "<group>";
 		};
+		CD56961626A5AE8400B8DF67 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CD56961726A5AE8400B8DF67 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CD56961726A5AE8400B8DF67 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CD56961826A5AE8400B8DF67 /* Cells */,
+				CD56961B26A5AE8400B8DF67 /* HomeInteractor.swift */,
+				CD56961C26A5AE8400B8DF67 /* HomeViewController.swift */,
+				CD56961D26A5AE8400B8DF67 /* HomeCoordinator.swift */,
+				CD56961E26A5AE8400B8DF67 /* HomePresenter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CD56961826A5AE8400B8DF67 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CD56961926A5AE8400B8DF67 /* IssueCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CD56962B26A5C8E800B8DF67 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD56962C26A5C8E800B8DF67 /* Label.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CDCD77EC26A1DDCA00F7F106 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CD56962926A5B84900B8DF67 /* issues.csv */,
 				CD21E94F26A1DC9000F2E175 /* Assets.xcassets */,
 				CD21E95126A1DC9000F2E175 /* LaunchScreen.storyboard */,
 			);
@@ -173,6 +230,7 @@
 		CDF2284826A1E46800EBE5BA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CD56962526A5B26100B8DF67 /* Reusable.swift */,
 				CDF2284926A1E46800EBE5BA /* Libraries */,
 				CDF2284F26A1E46800EBE5BA /* Extensions */,
 			);
@@ -201,6 +259,7 @@
 		CDF2284F26A1E46800EBE5BA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CD56962726A5B35700B8DF67 /* UICollectionView.swift */,
 				CDF2285026A1E46800EBE5BA /* Array.swift */,
 			);
 			path = Extensions;
@@ -319,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD56962A26A5B84900B8DF67 /* issues.csv in Resources */,
 				CD21E95326A1DC9000F2E175 /* LaunchScreen.storyboard in Resources */,
 				CD21E95026A1DC9000F2E175 /* Assets.xcassets in Resources */,
 			);
@@ -372,12 +432,20 @@
 			files = (
 				CDF2285526A1E46800EBE5BA /* Array.swift in Sources */,
 				CDF2285426A1E46800EBE5BA /* Reactor.swift in Sources */,
+				CD56962426A5AE8400B8DF67 /* HomePresenter.swift in Sources */,
+				CD56962126A5AE8400B8DF67 /* HomeInteractor.swift in Sources */,
 				CDCD77F826A1DE0B00F7F106 /* AppDependencies.swift in Sources */,
+				CD56962326A5AE8400B8DF67 /* HomeCoordinator.swift in Sources */,
+				CD56962826A5B35700B8DF67 /* UICollectionView.swift in Sources */,
 				CDF2284726A1E45B00EBE5BA /* CSVReaderService.swift in Sources */,
+				CD56961F26A5AE8400B8DF67 /* IssueCell.swift in Sources */,
 				CDF2285126A1E46800EBE5BA /* RootCoordinator.swift in Sources */,
 				CDCD77F326A1DE0B00F7F106 /* AppCoordinator.swift in Sources */,
 				CDF2285226A1E46800EBE5BA /* NavigationCoordinator.swift in Sources */,
+				CD56962626A5B26100B8DF67 /* Reusable.swift in Sources */,
 				CD21E94726A1DC8F00F2E175 /* AppDelegate.swift in Sources */,
+				CD56962D26A5C8E800B8DF67 /* Label.swift in Sources */,
+				CD56962226A5AE8400B8DF67 /* HomeViewController.swift in Sources */,
 				CDF2285326A1E46800EBE5BA /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
