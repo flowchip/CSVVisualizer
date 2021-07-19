@@ -29,7 +29,7 @@ class AppCoordinator: RootCoordinator {
     }
     
     private func setupAppAppearance() {
-        UINavigationBar.appearance().barTintColor = .black
+        UINavigationBar.appearance().barTintColor = UIColor(red: 71/256, green: 151/256, blue: 236/256, alpha: 1)
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().isTranslucent = false
