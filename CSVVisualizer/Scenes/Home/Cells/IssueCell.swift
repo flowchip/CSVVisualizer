@@ -7,13 +7,6 @@
 
 import UIKit
 
-struct IssueCellViewModel {
-    let name: String?
-    let surname: String?
-    let issuesCount: String?
-    let birth: String?
-}
-
 class IssueCell: UICollectionViewCell, ReusableView {
     
     enum Constants {
@@ -21,10 +14,7 @@ class IssueCell: UICollectionViewCell, ReusableView {
     }
     
     // MARK:- Views
-    let nameLabel = Label()
-    let surnameLabel = Label()
-    let countLabel = Label()
-    let birthLabel = Label()
+    let issueView = IssueView()
     
     // MARK:- Lifecycle
     override init(frame: CGRect) {
@@ -48,39 +38,18 @@ class IssueCell: UICollectionViewCell, ReusableView {
     }
     
     // MARK:- Functions
-    func config(with viewModel: IssueCellViewModel?) {
+    func config(with viewModel: IssueViewModel?) {
         guard let viewModel = viewModel else { return }
-        nameLabel.text = viewModel.name
-        surnameLabel.text = viewModel.surname
-        countLabel.text = viewModel.issuesCount
-        birthLabel.text = viewModel.birth
+        issueView.config(with: viewModel)
     }
     
     func addSubviews() {
-        contentView.addSubview(nameLabel)
-        contentView.addSubview(surnameLabel)
-        contentView.addSubview(countLabel)
-        contentView.addSubview(birthLabel)
+        contentView.addSubview(issueView)
     }
     
     func setupConstraints() {
-        nameLabel.snp.makeConstraints {
-            $0.left.top.bottom.equalToSuperview()
-            $0.width.equalToSuperview().multipliedBy(0.30)
-        }
-        surnameLabel.snp.makeConstraints {
-            $0.left.equalTo(nameLabel.snp.right)
-            $0.top.bottom.equalToSuperview()
-            $0.width.equalToSuperview().multipliedBy(0.30)
-        }
-        countLabel.snp.makeConstraints {
-            $0.left.equalTo(surnameLabel.snp.right)
-            $0.top.bottom.equalToSuperview()
-            $0.width.equalToSuperview().multipliedBy(0.2)
-        }
-        birthLabel.snp.makeConstraints {
-            $0.left.equalTo(countLabel.snp.right)
-            $0.top.bottom.right.equalToSuperview()
+        issueView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
     }
 }
