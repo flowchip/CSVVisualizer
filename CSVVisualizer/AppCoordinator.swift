@@ -29,7 +29,10 @@ class AppCoordinator: RootCoordinator {
     }
     
     private func setupAppAppearance() {
-        navigationController.setNavigationBarHidden(true, animated: false)
+        UINavigationBar.appearance().barTintColor = .black
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().isTranslucent = false
     }
     
     func showHomeScene() {
