@@ -53,13 +53,14 @@ final class IssueView: UIView {
     
     func setupConstraints() {
         nameLabel.snp.makeConstraints {
-            $0.left.top.bottom.equalToSuperview()
-            $0.width.equalToSuperview().multipliedBy(0.30)
+            $0.left.equalToSuperview().offset(8)
+            $0.top.bottom.equalToSuperview()
+            $0.width.equalToSuperview().multipliedBy(0.22)
         }
         surnameLabel.snp.makeConstraints {
             $0.left.equalTo(nameLabel.snp.right)
             $0.top.bottom.equalToSuperview()
-            $0.width.equalToSuperview().multipliedBy(0.30)
+            $0.width.equalToSuperview().multipliedBy(0.22)
         }
         countLabel.snp.makeConstraints {
             $0.left.equalTo(surnameLabel.snp.right)
@@ -78,9 +79,16 @@ final class IssueView: UIView {
         countLabel.text = viewModel.issuesCount
         birthLabel.text = viewModel.birth
         
-        backgroundColor = viewModel.style == .header ? .blue : .white
+        let style = viewModel.style
+        
+        backgroundColor = style == .header ? .systemBlue : .white
+        
+        layer.borderWidth = style == .header ? 0 : 0.5
+        layer.borderColor = UIColor.gray.withAlphaComponent(0.2).cgColor
+        
         [nameLabel, surnameLabel, countLabel, birthLabel].forEach {
-            $0.textColor = viewModel.style == .header ? .white : .black
+            $0.font = style == .header ? .systemFont(ofSize: 12, weight: .bold) : .systemFont(ofSize: 13, weight: .regular)
+            $0.textColor = style == .header ? .white : .black.withAlphaComponent(0.8)
         }
     }
 }

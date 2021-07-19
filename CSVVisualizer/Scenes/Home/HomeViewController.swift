@@ -31,6 +31,7 @@ final class HomeViewController: UIViewController {
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
+        layout.sectionHeadersPinToVisibleBounds = true
         return layout
     }()
     
@@ -149,7 +150,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
+        return CGSize(width: view.frame.width, height: 30)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

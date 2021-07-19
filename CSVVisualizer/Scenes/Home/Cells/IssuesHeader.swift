@@ -14,8 +14,6 @@ class IssuesHeader: UICollectionReusableView, ReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .blue
-        
         addSubview(issueView)
         issueView.snp.makeConstraints {
             $0.edges.equalToSuperview()
