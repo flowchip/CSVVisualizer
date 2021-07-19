@@ -11,7 +11,7 @@ import UIKit
 import SnapKit
 
 protocol HomeViewControllerInput {
-    var issues: Driver<Issues> { get }
+    var items: Driver<[IssueCellViewModel]> { get }
     var error: Driver<String> { get }
 }
 
@@ -43,8 +43,7 @@ final class HomeViewController: UIViewController {
     let input: HomeViewControllerInput
     let output: HomeViewControllerOutput
     private let disposeBag = DisposeBag()
-    private var issues: Issues?
-    private var collectionItems = [IssueCellViewModel]()
+    private var items = [IssueCellViewModel]()
     
     // Infinyte scroll
     private var showMore: Bool = false
@@ -94,14 +93,11 @@ final class HomeViewController: UIViewController {
     }
 
     private func setupBindings() {
-        input.issues
-            .drive(onNext: { [weak self] issues in
+        input.items
+            .drive(onNext: { [weak self] items in
                 guard let self = self else { return }
 
-                self.issues = issues
-                self.collectionItems = issues.items.map {
-                    IssueCellViewModel(name: $0.name, surname: $0.surname, issuesCount: $0.issuesCount, birth: $0.dateOfBirth)
-                }
+                self.items = items
                 self.collectionView.reloadData()
                 self.canLoadMore = true
             })
@@ -128,11 +124,11 @@ final class HomeViewController: UIViewController {
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionItems.count
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let viewModel = collectionItems[safe: indexPath.item]
+        let viewModel = items[safe: indexPath.item]
     
         let cell: IssueCell = {
             return collectionView.dequeueReusableCell(for: indexPath) as IssueCell

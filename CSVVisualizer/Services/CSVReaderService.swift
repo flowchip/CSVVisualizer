@@ -26,7 +26,9 @@ final class StandardCSVReaderService: CSVReaderService {
                 let content = try String(contentsOfFile: filepath)
                 let parsedCSV: [[String]] = content
                     .components(separatedBy: "\r\n")
-                    .map { $0.components(separatedBy: ",") }
+                    .map { $0.components(separatedBy: ",")
+                        .map { value in value.withoutQuotes() }
+                    }
                 
                 let items = Array(parsedCSV.suffix(parsedCSV.count - 1))
                 

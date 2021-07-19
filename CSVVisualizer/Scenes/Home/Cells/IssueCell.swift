@@ -66,17 +66,17 @@ class IssueCell: UICollectionViewCell, ReusableView {
     func setupConstraints() {
         nameLabel.snp.makeConstraints {
             $0.left.top.bottom.equalToSuperview()
-            $0.width.equalToSuperview().multipliedBy(0.25)
+            $0.width.equalToSuperview().multipliedBy(0.30)
         }
         surnameLabel.snp.makeConstraints {
             $0.left.equalTo(nameLabel.snp.right)
             $0.top.bottom.equalToSuperview()
-            $0.width.equalToSuperview().multipliedBy(0.25)
+            $0.width.equalToSuperview().multipliedBy(0.30)
         }
         countLabel.snp.makeConstraints {
             $0.left.equalTo(surnameLabel.snp.right)
             $0.top.bottom.equalToSuperview()
-            $0.width.equalToSuperview().multipliedBy(0.05)
+            $0.width.equalToSuperview().multipliedBy(0.2)
         }
         birthLabel.snp.makeConstraints {
             $0.left.equalTo(countLabel.snp.right)
