@@ -28,19 +28,7 @@ final class HomeCoordinator: NavigationCoordinator {
         self.navigationController = navigationController
         self.navigationController.viewControllers = [viewController]
         self.viewController = navigationController
-        interactor.delegate = self
     }
     
     func start() {}
-}
-
-// MARK: - Extension: HomeInteractorDelegate
-extension HomeCoordinator: HomeInteractorDelegate {
-
-}
-
-extension HomeCoordinator: CoordinatorDelegate {
-    func dismiss(coordinator: Coordinator) {
-        pop(child: coordinator)
-    }
 }

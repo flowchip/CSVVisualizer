@@ -9,10 +9,6 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-protocol HomeInteractorDelegate: AnyObject {
-//    func showArticle(_ article: Article)
-}
-
 struct HomeState {
     var issues: Issues? = nil
     var error: String? = nil
@@ -31,7 +27,6 @@ final class HomeInteractor: HomeViewControllerOutput, HomePresenterInput, Reacto
 
     typealias Dependencies = CSVReaderServiceProvider
     let dependencies: Dependencies
-    weak var delegate: HomeInteractorDelegate?
     
     init(dependencies: Dependencies) {
         self.dependencies = dependencies

@@ -28,6 +28,7 @@
 		CD56963126A5D8B000B8DF67 /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56963026A5D8B000B8DF67 /* IssueView.swift */; };
 		CD70CC7126A6C00500376EC8 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = CD70CC7026A6C00500376EC8 /* issues.csv */; };
 		CD70CC7326A6C7DB00376EC8 /* issuesBig.csv in Resources */ = {isa = PBXBuildFile; fileRef = CD70CC7226A6C7DB00376EC8 /* issuesBig.csv */; };
+		CD70CC7526A6EDB400376EC8 /* Issues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD70CC7426A6EDB400376EC8 /* Issues.swift */; };
 		CD9FE31826A6BF40008DFF3F /* empty_fields.csv in Resources */ = {isa = PBXBuildFile; fileRef = CD9FE31526A6BF40008DFF3F /* empty_fields.csv */; };
 		CDCD77F326A1DE0B00F7F106 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD77ED26A1DE0B00F7F106 /* AppCoordinator.swift */; };
 		CDCD77F826A1DE0B00F7F106 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD77F226A1DE0B00F7F106 /* AppDependencies.swift */; };
@@ -89,6 +90,7 @@
 		CD56963026A5D8B000B8DF67 /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		CD70CC7026A6C00500376EC8 /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
 		CD70CC7226A6C7DB00376EC8 /* issuesBig.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issuesBig.csv; sourceTree = "<group>"; };
+		CD70CC7426A6EDB400376EC8 /* Issues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issues.swift; sourceTree = "<group>"; };
 		CD9FE31526A6BF40008DFF3F /* empty_fields.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty_fields.csv; sourceTree = "<group>"; };
 		CDCD77ED26A1DE0B00F7F106 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CDCD77F226A1DE0B00F7F106 /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				CDF2284626A1E45B00EBE5BA /* CSVReaderService.swift */,
+				CD70CC7426A6EDB400376EC8 /* Issues.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				CD56962626A5B26100B8DF67 /* Reusable.swift in Sources */,
 				CD21E94726A1DC8F00F2E175 /* AppDelegate.swift in Sources */,
 				CD0DDF3926A5EF5400EB1F9C /* Date.swift in Sources */,
+				CD70CC7526A6EDB400376EC8 /* Issues.swift in Sources */,
 				CD56962D26A5C8E800B8DF67 /* Label.swift in Sources */,
 				CD56963126A5D8B000B8DF67 /* IssueView.swift in Sources */,
 				CD56962226A5AE8400B8DF67 /* HomeViewController.swift in Sources */,
