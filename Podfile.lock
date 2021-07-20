@@ -9,12 +9,14 @@ PODS:
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
   - SnapKit (5.0.1)
+  - SwiftCSV (0.6.0)
 
 DEPENDENCIES:
   - RxCocoa
   - RxOptional
   - RxSwift
   - SnapKit
+  - SwiftCSV
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -23,6 +25,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SnapKit
+    - SwiftCSV
 
 SPEC CHECKSUMS:
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
@@ -30,7 +33,8 @@ SPEC CHECKSUMS:
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftCSV: ebc63cacc3820042537288c0cc647946261f7c2c
 
-PODFILE CHECKSUM: 1bb843f465c59c1b2289845a4df083b94a9f283e
+PODFILE CHECKSUM: 8e01c529e6c72714f988a95c25786e70dd497d25
 
 COCOAPODS: 1.10.1

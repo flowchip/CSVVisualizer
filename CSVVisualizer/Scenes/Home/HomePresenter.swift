@@ -18,11 +18,14 @@ final class HomePresenter: HomeViewControllerInput {
     var section: Driver<IssuesSection>
     let error: Driver<String>
     
+    let queue = SerialDispatchQueueScheduler(qos: .userInitiated)
+    
     init(input: HomePresenterInput) {
         section = input.state
             .map { $0.issues }
             .filterNil()
-            .take(1)
+//            .take(1)
+            .observe(on: queue)
             .map { issues in
                 let header = IssueViewModel(
                     name: issues.headers[safe: 0],
@@ -31,7 +34,7 @@ final class HomePresenter: HomeViewControllerInput {
                     birth: issues.headers[safe: 3],
                     style: .header)
                 
-                let items = issues.items.dropFirst().map { item -> IssueViewModel in
+                let items = issues.items.map { item -> IssueViewModel in
                     let birthDate = item.dateOfBirth?.getDate()
                     let birth = birthDate?.prettyDateTime()
                     

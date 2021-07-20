@@ -88,6 +88,7 @@ final class HomeViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.contentInsetAdjustmentBehavior = .never
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
     }
 
     private func setupBindings() {

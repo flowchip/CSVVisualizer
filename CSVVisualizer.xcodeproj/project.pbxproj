@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20EDFE24BF60E60CE45DB022 /* libPods-CSVVisualizerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BE419ACC153B7017C49546 /* libPods-CSVVisualizerTests.a */; };
 		CD0DDF3526A5EEED00EB1F9C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0DDF3426A5EEED00EB1F9C /* String.swift */; };
 		CD0DDF3926A5EF5400EB1F9C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0DDF3826A5EF5400EB1F9C /* Date.swift */; };
+		CD0DDF3B26A5F41900EB1F9C /* CSVReaderServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0DDF3A26A5F41900EB1F9C /* CSVReaderServiceTests.swift */; };
 		CD21E94726A1DC8F00F2E175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21E94626A1DC8F00F2E175 /* AppDelegate.swift */; };
 		CD21E95026A1DC9000F2E175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD21E94F26A1DC9000F2E175 /* Assets.xcassets */; };
 		CD21E95326A1DC9000F2E175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD21E95126A1DC9000F2E175 /* LaunchScreen.storyboard */; };
-		CD21E95E26A1DC9000F2E175 /* CSVVisualizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21E95D26A1DC9000F2E175 /* CSVVisualizerTests.swift */; };
 		CD21E96926A1DC9000F2E175 /* CSVVisualizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21E96826A1DC9000F2E175 /* CSVVisualizerUITests.swift */; };
 		CD56961F26A5AE8400B8DF67 /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56961926A5AE8400B8DF67 /* IssueCell.swift */; };
 		CD56962126A5AE8400B8DF67 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56961B26A5AE8400B8DF67 /* HomeInteractor.swift */; };
@@ -25,6 +26,9 @@
 		CD56962D26A5C8E800B8DF67 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56962C26A5C8E800B8DF67 /* Label.swift */; };
 		CD56962F26A5D88500B8DF67 /* IssuesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56962E26A5D88500B8DF67 /* IssuesHeader.swift */; };
 		CD56963126A5D8B000B8DF67 /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56963026A5D8B000B8DF67 /* IssueView.swift */; };
+		CD70CC7126A6C00500376EC8 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = CD70CC7026A6C00500376EC8 /* issues.csv */; };
+		CD70CC7326A6C7DB00376EC8 /* issuesBig.csv in Resources */ = {isa = PBXBuildFile; fileRef = CD70CC7226A6C7DB00376EC8 /* issuesBig.csv */; };
+		CD9FE31826A6BF40008DFF3F /* empty_fields.csv in Resources */ = {isa = PBXBuildFile; fileRef = CD9FE31526A6BF40008DFF3F /* empty_fields.csv */; };
 		CDCD77F326A1DE0B00F7F106 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD77ED26A1DE0B00F7F106 /* AppCoordinator.swift */; };
 		CDCD77F826A1DE0B00F7F106 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD77F226A1DE0B00F7F106 /* AppDependencies.swift */; };
 		CDF2284726A1E45B00EBE5BA /* CSVReaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF2284626A1E45B00EBE5BA /* CSVReaderService.swift */; };
@@ -54,17 +58,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05BE419ACC153B7017C49546 /* libPods-CSVVisualizerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CSVVisualizerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80CF5E62A5BA9D3EA9450FD9 /* libPods-CSVVisualizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CSVVisualizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09EE9B38F457A847D554C9F /* Pods-CSVVisualizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVVisualizer.release.xcconfig"; path = "Target Support Files/Pods-CSVVisualizer/Pods-CSVVisualizer.release.xcconfig"; sourceTree = "<group>"; };
+		B3144EE9D8684EB57CAD60AA /* Pods-CSVVisualizerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVVisualizerTests.release.xcconfig"; path = "Target Support Files/Pods-CSVVisualizerTests/Pods-CSVVisualizerTests.release.xcconfig"; sourceTree = "<group>"; };
+		CC51D7A86CDAACD57B81F705 /* Pods-CSVVisualizerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVVisualizerTests.debug.xcconfig"; path = "Target Support Files/Pods-CSVVisualizerTests/Pods-CSVVisualizerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD0DDF3426A5EEED00EB1F9C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CD0DDF3826A5EF5400EB1F9C /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		CD0DDF3A26A5F41900EB1F9C /* CSVReaderServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReaderServiceTests.swift; sourceTree = "<group>"; };
 		CD21E94326A1DC8F00F2E175 /* CSVVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSVVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD21E94626A1DC8F00F2E175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD21E94F26A1DC9000F2E175 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD21E95226A1DC9000F2E175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD21E95426A1DC9000F2E175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD21E95926A1DC9000F2E175 /* CSVVisualizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVVisualizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD21E95D26A1DC9000F2E175 /* CSVVisualizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVVisualizerTests.swift; sourceTree = "<group>"; };
 		CD21E95F26A1DC9000F2E175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD21E96426A1DC9000F2E175 /* CSVVisualizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVVisualizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD21E96826A1DC9000F2E175 /* CSVVisualizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVVisualizerUITests.swift; sourceTree = "<group>"; };
@@ -80,6 +87,9 @@
 		CD56962C26A5C8E800B8DF67 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		CD56962E26A5D88500B8DF67 /* IssuesHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesHeader.swift; sourceTree = "<group>"; };
 		CD56963026A5D8B000B8DF67 /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
+		CD70CC7026A6C00500376EC8 /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
+		CD70CC7226A6C7DB00376EC8 /* issuesBig.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issuesBig.csv; sourceTree = "<group>"; };
+		CD9FE31526A6BF40008DFF3F /* empty_fields.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty_fields.csv; sourceTree = "<group>"; };
 		CDCD77ED26A1DE0B00F7F106 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CDCD77F226A1DE0B00F7F106 /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		CDF2284626A1E45B00EBE5BA /* CSVReaderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVReaderService.swift; sourceTree = "<group>"; };
@@ -104,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20EDFE24BF60E60CE45DB022 /* libPods-CSVVisualizerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				80CF5E62A5BA9D3EA9450FD9 /* libPods-CSVVisualizer.a */,
+				05BE419ACC153B7017C49546 /* libPods-CSVVisualizerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,8 +178,9 @@
 		CD21E95C26A1DC9000F2E175 /* CSVVisualizerTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD21E95D26A1DC9000F2E175 /* CSVVisualizerTests.swift */,
+				CD9FE31226A6BE5B008DFF3F /* Resources */,
 				CD21E95F26A1DC9000F2E175 /* Info.plist */,
+				CD0DDF3A26A5F41900EB1F9C /* CSVReaderServiceTests.swift */,
 			);
 			path = CSVVisualizerTests;
 			sourceTree = "<group>";
@@ -219,9 +232,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		CD9FE31226A6BE5B008DFF3F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD70CC7026A6C00500376EC8 /* issues.csv */,
+				CD9FE31526A6BF40008DFF3F /* empty_fields.csv */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		CDCD77EC26A1DDCA00F7F106 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CD70CC7226A6C7DB00376EC8 /* issuesBig.csv */,
 				CD56962926A5B84900B8DF67 /* issues.csv */,
 				CD21E94F26A1DC9000F2E175 /* Assets.xcassets */,
 				CD21E95126A1DC9000F2E175 /* LaunchScreen.storyboard */,
@@ -282,6 +305,8 @@
 			children = (
 				F25E9AA036C63DD511988D61 /* Pods-CSVVisualizer.debug.xcconfig */,
 				A09EE9B38F457A847D554C9F /* Pods-CSVVisualizer.release.xcconfig */,
+				CC51D7A86CDAACD57B81F705 /* Pods-CSVVisualizerTests.debug.xcconfig */,
+				B3144EE9D8684EB57CAD60AA /* Pods-CSVVisualizerTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -311,6 +336,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD21E97026A1DC9000F2E175 /* Build configuration list for PBXNativeTarget "CSVVisualizerTests" */;
 			buildPhases = (
+				6757E86D862FA09E13B157AA /* [CP] Check Pods Manifest.lock */,
 				CD21E95526A1DC9000F2E175 /* Sources */,
 				CD21E95626A1DC9000F2E175 /* Frameworks */,
 				CD21E95726A1DC9000F2E175 /* Resources */,
@@ -391,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD56962A26A5B84900B8DF67 /* issues.csv in Resources */,
+				CD70CC7326A6C7DB00376EC8 /* issuesBig.csv in Resources */,
 				CD21E95326A1DC9000F2E175 /* LaunchScreen.storyboard in Resources */,
 				CD21E95026A1DC9000F2E175 /* Assets.xcassets in Resources */,
 			);
@@ -400,6 +427,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD70CC7126A6C00500376EC8 /* issues.csv in Resources */,
+				CD9FE31826A6BF40008DFF3F /* empty_fields.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +442,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6757E86D862FA09E13B157AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CSVVisualizerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E3A99445A80E4CBC9A405C6E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -470,7 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD21E95E26A1DC9000F2E175 /* CSVVisualizerTests.swift in Sources */,
+				CD0DDF3B26A5F41900EB1F9C /* CSVReaderServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +716,7 @@
 		};
 		CD21E97126A1DC9000F2E175 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC51D7A86CDAACD57B81F705 /* Pods-CSVVisualizerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -686,6 +738,7 @@
 		};
 		CD21E97226A1DC9000F2E175 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3144EE9D8684EB57CAD60AA /* Pods-CSVVisualizerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

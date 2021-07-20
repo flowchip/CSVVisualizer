@@ -40,7 +40,7 @@ final class HomeInteractor: HomeViewControllerOutput, HomePresenterInput, Reacto
 
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-        default:
+        case .viewLoaded:
             return fetchNews()
         }
     }
@@ -61,16 +61,16 @@ final class HomeInteractor: HomeViewControllerOutput, HomePresenterInput, Reacto
     
     
     private func fetchNews() -> Observable<Mutation> {
-        return dependencies.csvReaderService
-            .fetchData()
-            .asObservable()
-            .map { result in
+        return Observable.create { observer in
+            self.dependencies.csvReaderService.fetchData(fromIndex: 0, limitTo: 100, fileName: "issues") { result in
                 switch result {
                 case .success(let issues):
-                    return .updateIssues(issues)
+                    observer.onNext(.updateIssues(issues))
                 case .failure(let error):
-                    return .setError(error.localizedDescription)
+                    observer.onNext(.setError(error.localizedDescription))
                 }
             }
+            return Disposables.create()
+        }
     }
 }

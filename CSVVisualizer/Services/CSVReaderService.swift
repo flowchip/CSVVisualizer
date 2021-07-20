@@ -5,10 +5,10 @@
 //  Created by Ciprian Cojan on 10/07/21.
 //
 
-import RxSwift
+import SwiftCSV
 
 protocol CSVReaderService {
-    func fetchData() -> Single<Result<Issues, Error>>
+    func fetchData(fromIndex: Int, limitTo: Int?, fileName: String, bundle: Bundle, _ block: @escaping (Result<Issues, Error>) -> Void)
 }
 
 protocol CSVReaderServiceProvider {
@@ -16,51 +16,71 @@ protocol CSVReaderServiceProvider {
 }
 
 final class StandardCSVReaderService: CSVReaderService {
-    let queue = SerialDispatchQueueScheduler(qos: .userInitiated)
     
-    func fetchData() -> Single<Result<Issues, Error>> {
-        return Single.create { single in
-            do {
-                
-                let filepath = Bundle.main.path(forResource: "issues", ofType: "csv") ?? ""
-                let content = try String(contentsOfFile: filepath)
-                let parsedCSV: [[String]] = content
-                    .components(separatedBy: "\r\n")
-                    .map { $0.components(separatedBy: ",")
-                        .map { value in value.withoutQuotes() }
-                    }
-                
-                let items = Array(parsedCSV.suffix(parsedCSV.count - 1))
-                
-                let issues = Issues(
-                    headers: parsedCSV.first ?? [],
-                    items: items.map { array in
-                        return Issues.Issue(
-                            name: array[safe: 0],
-                            surname: array[safe: 1],
-                            issuesCount: array[safe: 2],
-                            dateOfBirth: array[safe: 3])
-                        })
-
-                single(.success(.success(issues)))
-            } catch {
-                single(.success(.failure(error)))
-            }
+    func fetchData(fromIndex: Int, limitTo: Int?, fileName: String, bundle: Bundle, _ block: @escaping (Result<Issues, Error>) -> Void) {
+        do {
+            let csvURL = bundle.url(forResource: fileName, withExtension: "csv")!
+            let csv = try CSV(url: csvURL)
             
-            return Disposables.create()
+            var issues = Issues(headers: csv.header, items: [])
+            var items = [Issues.Issue]()
+            
+            try csv.enumerateAsArray(limitTo: limitTo, startAt: fromIndex) { array in
+                let issue = array.getIssue()
+                let newBlock = array == csv.header || issue != nil
+                
+                if array != csv.header, let issue = issue {
+                    items.append(issue)
+                    issues.items = items
+                }
+                
+                if newBlock {
+                    block(.success(issues))
+                }
+            }
+        } catch {
+            block(.failure(error))
         }
-        .subscribe(on: queue)
+    }
+}
+
+extension CSVReaderService {
+    func fetchData(fromIndex: Int = 0,
+                   limitTo: Int? = nil,
+                   fileName: String = "issues",
+                   bundle: Bundle = Bundle(for: StandardCSVReaderService.self),
+                   _ block: @escaping (Result<Issues, Error>) -> Void) {
+        return fetchData(fromIndex: fromIndex, limitTo: limitTo, fileName: fileName, bundle: bundle, block)
     }
 }
 
 struct Issues {
     let headers: [String]
-    let items: [Issue]
+    var items: [Issue]
     
-    struct Issue {
+    struct Issue: Equatable {
         let name: String?
         let surname: String?
         let issuesCount: String?
         let dateOfBirth: String?
+        
+        static func ==(lhs: Issue, rhs: Issue) -> Bool {
+            return lhs.name == rhs.name &&
+                lhs.surname == rhs.surname &&
+                lhs.issuesCount == rhs.issuesCount &&
+                lhs.dateOfBirth == rhs.dateOfBirth
+        }
+    }
+}
+
+extension Array where Element == String {
+    func getIssue() -> Issues.Issue? {
+        guard self.count > 0, self[safe: 0]?.isNotEmpty ?? false else { return nil }
+        
+        return Issues.Issue(
+            name: self[safe: 0],
+            surname: self[safe: 1],
+            issuesCount: self[safe: 2],
+            dateOfBirth: self[safe: 3])
     }
 }
