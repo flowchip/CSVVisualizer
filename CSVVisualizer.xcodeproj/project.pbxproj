@@ -91,6 +91,7 @@
 		CD70CC7026A6C00500376EC8 /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
 		CD70CC7226A6C7DB00376EC8 /* issuesBig.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issuesBig.csv; sourceTree = "<group>"; };
 		CD70CC7426A6EDB400376EC8 /* Issues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issues.swift; sourceTree = "<group>"; };
+		CD70CC7626A6F76C00376EC8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		CD9FE31526A6BF40008DFF3F /* empty_fields.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty_fields.csv; sourceTree = "<group>"; };
 		CDCD77ED26A1DE0B00F7F106 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CDCD77F226A1DE0B00F7F106 /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
@@ -164,6 +165,7 @@
 		CD21E94526A1DC8F00F2E175 /* CSVVisualizer */ = {
 			isa = PBXGroup;
 			children = (
+				CD70CC7626A6F76C00376EC8 /* README.md */,
 				CD56961626A5AE8400B8DF67 /* Scenes */,
 				CDF2284826A1E46800EBE5BA /* Utilities */,
 				CDF2284526A1E45B00EBE5BA /* Services */,
