@@ -20,7 +20,7 @@ final class StandardCSVReaderService: CSVReaderService {
     func fetchData(fromIndex: Int, limitTo: Int?, fileName: String, bundle: Bundle, _ block: @escaping (Result<Issues, Error>) -> Void) {
         do {
             let csvURL = bundle.url(forResource: fileName, withExtension: "csv")!
-            let csv = try CSV(url: csvURL)
+            let csv = try CSV(url: csvURL, loadColumns: false)
             
             var issues = Issues(headers: csv.header, items: [])
             var items = [Issues.Issue]()

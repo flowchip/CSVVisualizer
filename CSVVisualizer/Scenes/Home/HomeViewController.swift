@@ -21,6 +21,7 @@ protocol HomeViewControllerOutput {
 
 enum HomeAction {
     case viewLoaded
+    case loadNextRows(from: Int)
 }
 
 final class HomeViewController: UIViewController {
@@ -45,10 +46,8 @@ final class HomeViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private var section: IssuesSection?
     
-    // Infinyte scroll
-    private var showMore: Bool = false
-    private var page: Int = 1
-    private var canLoadMore: Bool = true
+    // Infinite scroll
+    private var paginationLoading: Bool = false
 
     // MARK: - Lifecycle
     init(input: HomeViewControllerInput, output: HomeViewControllerOutput) {
@@ -84,7 +83,7 @@ final class HomeViewController: UIViewController {
     }
     
     private func setupCollectionView() {
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemBlue
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.contentInsetAdjustmentBehavior = .never
@@ -96,9 +95,9 @@ final class HomeViewController: UIViewController {
             .drive(onNext: { [weak self] section in
                 guard let self = self else { return }
 
+                self.paginationLoading = false
                 self.section = section
                 self.collectionView.reloadData()
-                self.canLoadMore = true
             })
             .disposed(by: disposeBag)
 
@@ -163,5 +162,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - UIScrollViewDelegate
 extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let indexPath = collectionView.indexPathsForVisibleItems.sorted().last
+        let itemsCount = section?.items.count ?? 0
+    
+        if indexPath?.item == (itemsCount - 2) && paginationLoading == false {
+            paginationLoading = true
+            output.action.onNext(.loadNextRows(from: itemsCount + 1))
+        }
     }
 }

@@ -24,7 +24,6 @@ final class HomePresenter: HomeViewControllerInput {
         section = input.state
             .map { $0.issues }
             .filterNil()
-//            .take(1)
             .observe(on: queue)
             .map { issues in
                 let header = IssueViewModel(

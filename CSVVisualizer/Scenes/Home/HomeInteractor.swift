@@ -36,28 +36,35 @@ final class HomeInteractor: HomeViewControllerOutput, HomePresenterInput, Reacto
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .viewLoaded:
-            return fetchNews()
+            return fetchData()
+        case .loadNextRows(let from):
+            return fetchData(fromIndex: from)
         }
     }
 
     func reduce(state: State, mutation: Mutation) -> State {
-        var state = state
-        state.error = nil
+        var newState = state
+        newState.error = nil
         
         switch mutation {
         case .updateIssues(let issues):
-            state.issues = issues
+            if var existingIssues = newState.issues, let lastAdded = issues.items.last {
+                existingIssues.items.append(lastAdded)
+                newState.issues = existingIssues
+            } else {
+                newState.issues = issues
+            }
         case .setError(let error):
-            state.error = error
+            newState.error = error
         }
         
-        return state
+        return newState
     }
     
     
-    private func fetchNews() -> Observable<Mutation> {
+    private func fetchData(fromIndex: Int = 0) -> Observable<Mutation> {
         return Observable.create { observer in
-            self.dependencies.csvReaderService.fetchData(fromIndex: 0, limitTo: 100, fileName: "issues") { result in
+            self.dependencies.csvReaderService.fetchData(fromIndex: fromIndex, limitTo: fromIndex + 100, fileName: "issuesBig") { result in
                 switch result {
                 case .success(let issues):
                     observer.onNext(.updateIssues(issues))
